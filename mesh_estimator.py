@@ -7,16 +7,16 @@ import numpy as np
 from collections import defaultdict
 from torchvision.transforms import Normalize
 from detectron2.config import LazyConfig
-from third_party.CameraHMR.core.utils.utils_detectron2 import DefaultPredictor_Lazy
+from core.utils.utils_detectron2 import DefaultPredictor_Lazy
 
-from third_party.CameraHMR.core.camerahmr_model import CameraHMR
-from third_party.CameraHMR.core.constants import CHECKPOINT_PATH, CAM_MODEL_CKPT, SMPL_MODEL_PATH, DETECTRON_CKPT, DETECTRON_CFG
-from third_party.CameraHMR.core.datasets.dataset import Dataset
-from third_party.CameraHMR.core.utils.renderer_pyrd import Renderer
-from third_party.CameraHMR.core.utils import recursive_to
-from third_party.CameraHMR.core.utils.geometry import batch_rot2aa
-from third_party.CameraHMR.core.cam_model.fl_net import FLNet
-from third_party.CameraHMR.core.constants import IMAGE_SIZE, IMAGE_MEAN, IMAGE_STD, NUM_BETAS
+from core.camerahmr_model import CameraHMR
+from core.constants import CHECKPOINT_PATH, CAM_MODEL_CKPT, SMPL_MODEL_PATH, DETECTRON_CKPT, DETECTRON_CFG
+from core.datasets.dataset import Dataset
+from core.utils.renderer_pyrd import Renderer
+from core.utils import recursive_to
+from core.utils.geometry import batch_rot2aa
+from core.cam_model.fl_net import FLNet
+from core.constants import IMAGE_SIZE, IMAGE_MEAN, IMAGE_STD, NUM_BETAS
 
 def resize_image(img, target_size):
     height, width = img.shape[:2]
